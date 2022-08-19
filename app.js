@@ -155,7 +155,7 @@ const App = (function (ProductCtrl, UICtrl, StorageCtrl) {
     //show total
     UICtrl.showTotal(total);
 
-    // Delete from LS
+    // Delete from Local Storage
 
     StorageCtrl.deleteProductLS(selectedProduct.id);
 
