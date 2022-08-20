@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Cart Calculator",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "/assets/cart.png"
+  }
+}
