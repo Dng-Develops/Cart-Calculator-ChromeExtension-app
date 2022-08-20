@@ -2,25 +2,6 @@ import ProductController from "/product.js";
 import StorageController from "/storage.js";
 import UIController from "/uı.js";
 
-//####### Excahnge Rates Api #######//
-// Site url = https://rates.hirak.site/
-// const api =
-//   "https://rates.hirak.site/rate.php?from=USD&to=TRY&token=57b00d44989865016296053f62879c30";
-
-// let currentRate = 0;
-
-// function getData(api) {
-//   fetch(api)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((data) => {
-//       currentRate = data.rate;
-//     });
-// }
-
-// getData(api);
-
 //####### App Controller #######//
 const App = (function (ProductCtrl, UICtrl, StorageCtrl) {
   const UISelectors = UICtrl.getSelectors();

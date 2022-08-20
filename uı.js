@@ -1,5 +1,18 @@
 import ProductController from "/product.js";
 
+//####### Excahnge Rates Api #######//
+// Github = https://github.com/fawazahmed0/currency-api
+
+const api =
+  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/try.json";
+
+async function getData(api) {
+  return fetch(api).then((res) => res.json().then((data) => data.try));
+}
+
+const currentRate = await getData(api);
+console.log(currentRate);
+
 //####### IU Controller #######//
 const UIController = (function () {
   const Selectors = {
@@ -86,10 +99,9 @@ const UIController = (function () {
     },
     showTotal: function (total) {
       document.querySelector(Selectors.totalTL).textContent =
-        (total * 17.92).toFixed(2) + " TL";
-
-      //With Api
-      // (total * currentRate).toFixed(2) + " TL";
+        (total * currentRate).toFixed(2) + " TL";
+      //Wihout api
+      // (total * 17.92).toFixed(2) + " TL";
 
       document.querySelector(Selectors.totalDollar).textContent =
         total.toFixed(2) + " $";
